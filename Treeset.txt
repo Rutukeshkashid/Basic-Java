@@ -1,0 +1,85 @@
+package com.set;
+
+import java.util.Iterator;
+import java.util.TreeSet;
+
+public class Treeset {
+	//Tree set is the direct implemented class of navigable set but indirectly implements
+	//sorted and set interface
+	
+	//Properties:
+	// 1. It is not index based data structure
+	//2. It does not follow insertion order
+	//3. It follow sorting order
+	//4. It always store same data type elements
+	//5. Can not store duplicate elements
+	//6. It is non-sychronized data structure
+	//7. it can not store null value.
+
+	public static void main(String[] args) {
+		TreeSet<Integer> ts =new TreeSet<Integer>();
+				
+		ts.add(10);
+		ts.add(40);
+		ts.add(50);
+		ts.add(30);
+		ts.add(20);
+		ts.add(11);
+		ts.add(10); //can not add duplicate value
+		//ts.add(null);// can not add null value
+		
+		System.out.println(ts);//  follow sorting order not insertaion order
+		System.out.println("first element"+ " "+ ts.first());
+		System.out.println("last element"+ " "+ts.last());
+		
+//		ts.pollLast();
+//		System.out.println("remove last element"+" " +ts);
+//		
+//		ts.pollFirst();
+//		System.out.println("Remove first element"+" "+ts);
+		
+//		ts.headSet(40);
+//		System.out.println(ts);
+		
+		
+		
+		ts.contains(30);
+		System.out.println(ts);
+		
+		
+//		Iterator<Integer> it =ts.iterator();
+//		while(it.hasNext()) {
+//			
+//			System.out.println(it.next());
+//		}
+		
+	///////////////////////////////////////////////////////////////////////	
+		
+		TreeSet<String> tt= new TreeSet<String>();
+		
+//		tt.add("Rutukesh");
+//		tt.add("Anish");
+//		tt.add("Swami");
+//		tt.add("Jayashri");
+		
+		tt.add("A");
+		tt.add("B");
+		tt.add("C");
+		tt.add("D");
+		tt.add("Z");
+		tt.add("H");
+		
+		//tt.add(100);//only same data type elements 
+		
+		//tt.clear();  // clear method to clear all element
+		//tt.remove("Rutukesh"); to delete particular data
+		
+		System.out.println(tt);
+		
+		System.out.println("celling value"+" "+tt.ceiling("E"));  //next to that element
+		System.out.println("floor value"+" "+tt.floor("F"));   // before to that element
+		System.out.println("higher element of B is "+" "+ tt.higher("B"));
+		System.out.println("lower element of B is "+" "+ tt.lower("B"));
+	}
+
+}
